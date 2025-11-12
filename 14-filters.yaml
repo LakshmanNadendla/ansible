@@ -44,10 +44,10 @@
 - name: convert dictionary into items/list
   hosts: localhost
   vars:
-  my_dict:
-  course: Ansible
-  Trainer: Satya Y.v 
-  Duration: 6 months 
+    my_dict:
+      course: Ansible
+      Trainer: Satya Y.v 
+      Duration: 6 months 
   tasks:
   - name: Before convert
     ansible.builtin.debug:
@@ -66,7 +66,7 @@
   tasks:
   - name: before convert
     ansible.builtin.debug:
-      msg: "Before convert: {{my_dict}}"
+      msg: "Before convert: {{my_list}}"
   - name: After convert
     ansible.builtin.debug:
       msg: "After convert: {{my_list | items2dict }}"

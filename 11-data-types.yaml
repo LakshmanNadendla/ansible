@@ -12,7 +12,6 @@
       Docker: 1
     RealProject: true # boolean
   tasks:
-  - name: print variables
-  ansible.builtin.debug:
-    msg: "Course: {{Course}}, Tools Covered: {{Tools}}, Experience is: {{Experience}}, is real Project: {{RealProject}}"
-    
+    - name: print variables
+      ansible.builtin.debug:
+        msg: "Course: {{Course}}, Tools Covered: {{Tools}}, Experience is: {{Experience}}, is real Project: {{RealProject}}"

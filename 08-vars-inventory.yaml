@@ -6,4 +6,4 @@
       Trainer: "Satya Narayana Y V"
       timings: "07:15 AM IST"
     ansible.builtin.debug:
-      msg: "Hi, We are learning devops from Trainer {{Trainer}}, Duration is {{Duration}}"
+      msg: "Hi, We are learning devops from Trainer {{Trainer}}, Duration is {{timings}}"

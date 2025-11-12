@@ -1,0 +1,18 @@
+- name: variables
+  hosts: localhost
+  vars: # variable declaration
+    Course: "Terraform"
+    Trainer: "Lakshman_Nadendla"
+    Duration: "15 Hrs"
+  tasks:
+    - name: print override information 
+      vars:
+        Course: "Devops"
+      ansible.builtin.debug:
+        msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}},Duration is {{Duration}}"
+
+    - name: print information 
+      vars:  # play level variables
+        Course: "Devops"
+      ansible.builtin.debug:
+        msg: "Hi, we are learning {{Course}} from trainer {{Trainer}}, duration is {{Duration}}"
